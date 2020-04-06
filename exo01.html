@@ -1,17 +1,13 @@
 <body>
-    
-
-<script>
-
-    let firstSoloLetter = string => {
-        for (i = 0; i < string.length; i++) {
-            let indexOfFirst = string.indexOf(string[i])
-            if (string.indexOf(string[i], (indexOfFirst + 1)) === -1) {
-                return string[i]
-            }
+  <script>
+    let firstSoloLetter = (string) => {
+      for (i = 0; i < string.length; i++) {
+        let indexOfFirst = string.indexOf(string[i]);
+        if (string.indexOf(string[i], indexOfFirst + 1) === -1) {
+          return string[i];
         }
-        return null
-    }
-
-</script>
+      }
+      return null;
+    };
+  </script>
 </body>
