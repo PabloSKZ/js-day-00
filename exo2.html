@@ -1,0 +1,18 @@
+<body>
+    <script>
+
+const inhabitantsCityName = {Paris: "Parisiens", Blois: "Blésois", Marseille: "Marseillais", Lille: "Lillois"}
+const numberInhabitants = [["Lille", 232741],["Paris", 2148000],["Blois", 45710], ["Marseille", 861635]]
+
+let inhabitantsNames = []
+
+let orderCities = (inhabitantsCityName, numberInhabitants) => {
+    numberInhabitants.sort((a,b) => b[1] - a[1])
+    for (i in numberInhabitants) {
+        inhabitantsNames.push(inhabitantsCityName[numberInhabitants[i][0]])
+    }
+    return inhabitantsNames
+}
+
+    </script>
+</body>

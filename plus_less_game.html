@@ -1,0 +1,36 @@
+<body>
+
+    <a onclick="window.location.reload(false);" href="#" style="text-align: text-center; margin: 100px; font-size: 50px;">Rejouer</a>
+
+    <script>
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min +1)) + min;
+}
+
+let random = getRandomIntInclusive(1, 100)
+let life = 10
+let win = false
+
+while (life > 0 && !win) {
+    let proposition = prompt("Proposez un chiffre")
+    if (proposition < random) {
+        alert("Le chiffre à trouver est plus grand !")
+    } else if (proposition > random) {
+        alert("Le chiffre à trouver est plus petit !")
+    } else {
+        win = true
+    }
+    life--
+} 
+
+if (win) {
+    alert("Bravo tu as gagné !") 
+} else {
+    alert("Perdu ! Essaye encore")
+}
+
+    </script>
+</body>
